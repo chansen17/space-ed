@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Oxygen:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    body {
+        @apply font-[Oxygen];
+    }
+
+    h1,h2,h3 {
+        @apply font-[Cinzel]
+    }
+}
