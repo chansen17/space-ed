@@ -40,12 +40,12 @@ export default function Crew() {
 
   return (
     <div className="relative min-h-screen">
-        <img className="absolute top-0 left-0 h-full w-full object-cover -z-10" src={CrewBG} />
+        <img className="absolute top-0 left-0 h-full w-full object-cover -z-10 animate animate__animated animate__fadeIn" src={CrewBG} />
         <div className="max-w-[1440px] w-full px-5 mx-auto pt-32 md:pt-52">
             <div className="">
                 <p className="text-gray-200 uppercase text-lg md:text-xl lg:text-2xl text-center md:text-left"><span className="font-semibold text-gray-500">01</span> meet your crew</p>
             </div>
-            <section className="flex flex-col-reverse md:grid md:grid-cols-2 gap-6 md:gap-12 pt-32 pb-10 md:pb-0">
+            <section className="flex flex-col-reverse md:grid md:grid-cols-2 gap-6 md:gap-12 pt-12 md:pt-32 pb-10 md:pb-0">
                 <motion.div key={active.name} initial={{ opacity: 0, translateX: 10}} animate={{ opacity: 1, translateX: 0}} className="space-y-6">
                     <div className="space-y-2">
                         <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-500">{active.role}</h2>

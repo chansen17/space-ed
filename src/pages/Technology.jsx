@@ -30,12 +30,12 @@ export default function Technology() {
 
   return (
     <div className="relative min-h-screen pb-10 lg:pb-0">
-        <img className="absolute top-0 left-0 h-full w-full object-cover -z-10" src={TechBG} />
+        <img className="absolute top-0 left-0 h-full w-full object-cover -z-10 animate animate__animated animate__fadeIn" src={TechBG} />
         <div className="max-w-[1440px] w-full px-5 mx-auto pt-32 md:pt-52">
             <div className="">
                 <p className="text-gray-200 uppercase text-lg md:text-xl lg:text-2xl text-center md:text-left"><span className="font-semibold text-gray-500">01</span> space launch 101</p>
             </div>
-            <section className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-6 md:gap-12 pt-32 pb-10 md:pb-0">
+            <section className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-6 md:gap-12 pt-12 md:pt-32 pb-10 md:pb-0">
                 <div className="flex flex-col md:flex-row gap-2">
                     <div className="w-full flex flex-row md:flex-col justify-center md:justify-start gap-4">
                         {items.map((item, index) => (

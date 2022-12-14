@@ -15,7 +15,7 @@ export default function Homepage() {
                 </div>
                 <div className="grid place-items-center">
                     <NavLink to="/destination" className="h-64 w-64 grid place-items-center text-2xl md:text-3xl lg:text-4xl bg-gray-200 rounded-full cursor-pointer shadow-xl shadow-black/50 font-light relative group">
-                        <div className="absolute h-full w-full bg-gray-900/70 -z-10 group-hover:scale-150 rounded-full duration-1000" />
+                        <div className="absolute h-full w-full bg-gray-500/20 -z-10 group-hover:scale-150 rounded-full duration-1000" />
                         <span className="font-[Cinzel]">Explore</span>
                     </NavLink>
                 </div>

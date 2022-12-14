@@ -2,10 +2,10 @@ import React, { useEffect, useState} from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 
 import DestinationBG from '../images/destination/background-destination-desktop.jpg'
-import Europa from '../images/destination/image-europa.png';
-import Mars from '../images/destination/image-mars.png';
-import Moon from '../images/destination/image-moon.png';
-import Titan from '../images/destination/image-titan.png';
+import Europa from '../images/destination/image-europa.webp';
+import Mars from '../images/destination/image-mars.webp';
+import Moon from '../images/destination/image-moon.webp';
+import Titan from '../images/destination/image-titan.webp';
 
 let items = [
     {
@@ -51,15 +51,15 @@ export default function Destination() {
     const [active, setActive] = useState(items[0]);
 
   return (
-    <div className="relative min-h-screen">
-        <img className="absolute top-0 left-0 h-full w-full object-cover -z-10" src={DestinationBG} />
+    <div className={`relative min-h-screen bg-[url('')] bg-cover`}>
+        <img className="absolute top-0 left-0 h-full w-full object-cover -z-10 animate animate__animated animate__fadeIn" src={DestinationBG} />
         <div className="max-w-[1440px] w-full px-5 mx-auto pt-32 md:pt-52">
             <div className="">
                 <p className="text-gray-200 uppercase text-lg md:text-xl lg:text-2xl text-center md:text-left"><span className="font-semibold text-gray-500">01</span> pick your destination</p>
             </div>
-            <section className="flex flex-col-reverse md:grid md:grid-cols-2 gap-6 md:gap-12 pt-32">
+            <section className="flex flex-col-reverse md:grid md:grid-cols-2 gap-6 md:gap-12 pt-12 md:pt-32">
                 <div className="grid place-items-center">
-                    <motion.div key={active.id} initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0}}>
+                    <motion.div key={active.id} initial={{ opacity: 0, translateY: 20 }} exit={{ opacity: 0 }} animate={{ opacity: 1, translateY: 0}}>
                         <img src={active.img} className="w-full h-full object-cover" />
                     </motion.div>
                 </div>
@@ -69,7 +69,7 @@ export default function Destination() {
                             <span key={item.id} onClick={() => setActive(item)} className="py-1 text-gray-400 hover:text-gray-200 duration-300 cursor-pointer text-md md:text-lg lg:text-xl hover:underline">{item.title}</span>
                         ))}
                     </div>
-                    <motion.div key={active.id} initial={{ translateX: 50, opacity: 0}} animate={{ translateX: 0, opacity: 1 }} className="space-y-6 pb-10">
+                    <motion.div key={active.id} initial={{ translateX: 50, opacity: 0}} exit={{ opacity: 0 }} animate={{ translateX: 0, opacity: 1 }} className="space-y-6 pb-10">
                         <h2 className="text-gray-200 text-3xl md:text-5xl lg:text-7xl">{active.title}</h2>
                         <p className="text-gray-400 text-md md:text-lg">{active.text}</p>
                         <div className="grid grid-cols-2 gap-2 md:gap-4 text-gray-400 border-t border-gray-700 pt-10">
